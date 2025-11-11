@@ -1,1 +1,49 @@
+/* --- Estilos para a Página do Álbum (album.html) --- */
 
+/* Ajusta o fundo da página de álbum para algo mais contido */
+.album-body {
+    background-color: #333; /* Fundo escuro */
+    color: white;
+}
+
+/* Container do Álbum (similar ao container principal da outra página) */
+.album-container {
+    width: 90%;
+    max-width: 400px; 
+    background-color: #1a1a2e; /* Fundo azul escuro principal */
+    min-height: 500px; /* Garante que tenha uma altura mínima */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Estilo do cabeçalho do álbum (barra vermelha) */
+.album-header {
+    background-color: #cc0000; /* Cor vermelha do topo */
+    padding: 10px;
+    height: 40px; /* Altura da barra */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do botão Voltar */
+.botao-voltar {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* O .album-grid e .album-item já existem no CSS anterior, 
+   mas certifique-se de que o .album-grid na página de álbum 
+   tenha algum espaçamento do topo. */
+.album-grid {
+    margin-top: 20px; /* Adiciona um espaço abaixo da barra vermelha */
+    /* Mantenha as propriedades de grid que você já tem:
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 80%;
+    margin: 30px auto 0; */
+}
