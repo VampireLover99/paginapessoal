@@ -1,49 +1,142 @@
-/* --- Estilos para a Página do Álbum (album.html) --- */
-
-/* Ajusta o fundo da página de álbum para algo mais contido */
-.album-body {
-    background-color: #333; /* Fundo escuro */
-    color: white;
+{
+    background-color: #333; /* Fundo cinza escuro da área de trabalho */
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza o cartão horizontalmente */
+    align-items: center; /* Centraliza o cartão verticalmente */
+    min-height: 100vh; /* Ocupa a altura total da tela */
 }
 
-/* Container do Álbum (similar ao container principal da outra página) */
-.album-container {
+/* CARTÃO PRINCIPAL (Onde o conteúdo está) */
+.main-card {
     width: 90%;
-    max-width: 400px; 
-    background-color: #1a1a2e; /* Fundo azul escuro principal */
-    min-height: 500px; /* Garante que tenha uma altura mínima */
-    border-radius: 8px;
+    max-width: 400px;
+    background-color: hsl(240, 19%, 14%); /* Fundo azul escuro principal */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* CORES DE DESTAQUE */
+.accent-color-bg {
+    background-color: #cc0000; /* Cor Vermelha/Vinho para botões e rodapé */
+}
+.accent-color-text {
+    color: #cc0000;
+}
+.border-accent {
+    border: 4px solid #cc0000;
+}
+
+/* SOMBRAS E ÍCONES */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bat-icon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+/* --- ESTILO DO CABEÇALHO (Fundo de Madeira na Introdução) --- */
+.header-bg {
+    /* **CAMINHO DA IMAGEM 1: Fundo do Cabeçalho** */
+    background-image: url('imagem_fundo_madeira.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 20px 20px 80px; /* Padding extra para a foto de perfil */
+    position: relative;
+}
+
+.header-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* --- INTRODUÇÃO (index.html) --- */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px; /* Move a foto para cima, invadindo o header */
+}
+
+.profile-pic {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão "Entrar" VERMELHO */
+.btn-entrar {
+    display: block;
+    width: 90%;
+    margin: 24px auto 0;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.btn-entrar:hover {
+    background-color: #990000;
+}
+
+/* --- ÁLBUM (album.html) --- */
+
+/* Fundo dos placeholders das fotos (Preto escuro) */
+.album-placeholder-bg {
+    background-color: #0d0d1a;
+    height: 120px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
-/* Estilo do cabeçalho do álbum (barra vermelha) */
-.album-header {
-    background-color: #cc0000; /* Cor vermelha do topo */
-    padding: 10px;
-    height: 40px; /* Altura da barra */
-    display: flex;
-    align-items: center;
-}
-
-/* Estilo do botão Voltar */
-.botao-voltar {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-/* O .album-grid e .album-item já existem no CSS anterior, 
-   mas certifique-se de que o .album-grid na página de álbum 
-   tenha algum espaçamento do topo. */
 .album-grid {
-    margin-top: 20px; /* Adiciona um espaço abaixo da barra vermelha */
-    /* Mantenha as propriedades de grid que você já tem:
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 80%;
-    margin: 30px auto 0; */
+    gap: 15px;
+    padding: 20px;
+}
+
+.album-placeholder-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rodapé Vermelho do Álbum com o botão Voltar */
+.album-footer {
+    padding: 15px;
+    text-align: left;
+}
+
+.btn-voltar {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
