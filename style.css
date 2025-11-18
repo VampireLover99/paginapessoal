@@ -1,39 +1,42 @@
 /* ------------------------------------------------------------------- */
 /* ARQUIVO: style.css - Estilos Visuais da Página */
-/* CORREÇÃO DE TAMANHO DO CARTÃO */
+/* CORREÇÃO DE TELA CHEIA (CARTÃO GRANDE) */
 /* ------------------------------------------------------------------- */
 
-/* RESET ESSENCIAL: Remove margens e paddings padrão de TODOS os elementos */
+/* RESET ESSENCIAL */
 * {
     box-sizing: border-box;
 }
 
-/* Garante que o HTML ocupe 100% da janela e remove a margem padrão */
+/* Garante que o HTML e BODY ocupem 100% da janela e remove margens */
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0; /* Remove a margem padrão do body */
-    padding: 0; /* Remove o padding padrão */
+    margin: 0;
+    padding: 0;
 }
 
-/* CONFIGURAÇÃO GLOBAL (Aplicado a toda a janela do navegador) */
+/* CONFIGURAÇÃO GLOBAL (Fundo em Tela Cheia e Centralização) */
 body {
-    background-color: #333; /* Fundo cinza escuro da área de trabalho */
+    background-color: #333; /* Fundo cinza escuro */
     font-family: 'Arial', sans-serif;
     color: #ffffff;
     
     /* Centralização usando Flexbox */
     display: flex;
-    justify-content: center; /* Centraliza o cartão horizontalmente */
-    align-items: center; /* Centraliza o cartão verticalmente */
-    min-height: 100vh; /* Ocupa a altura total da tela visível */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Adiciona um pequeno padding para evitar que o cartão cole na borda da tela em dispositivos muito pequenos */
 }
 
 /* CARTÃO PRINCIPAL (Onde o conteúdo está) */
 .main-card {
-    width: 90%;
-    /* CORREÇÃO: Aumenta a largura máxima para 600px para que fique maior no desktop */
-    max-width: 600px; 
+    /* CORREÇÃO: Define 95% da largura da tela. */
+    width: 95%; 
+    
+    /* REMOVIDO: max-width para permitir que o cartão seja grande em telas grandes. */
+    
     background-color: #1a1a2e; /* Fundo azul escuro principal */
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
@@ -71,7 +74,7 @@ body {
     background-image: url('imagem_fundo_madeira.png'); 
     background-size: cover;
     background-position: center;
-    padding: 20px 20px 80px; /* Padding extra para a foto de perfil */
+    padding: 20px 20px 80px;
     position: relative;
 }
 
@@ -95,69 +98,4 @@ body {
     text-decoration: none;
 }
 
-/* --- INTRODUÇÃO (index.html) --- */
-.profile-pic-container {
-    display: flex;
-    justify-content: center;
-    margin-top: -60px; /* Move a foto para cima, invadindo o header */
-}
-
-.profile-pic {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Botão "Entrar" VERMELHO */
-.btn-entrar {
-    display: block;
-    width: 90%;
-    margin: 24px auto 0;
-    padding: 12px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-.btn-entrar:hover {
-    background-color: #990000;
-}
-
-/* --- ÁLBUM (album.html) --- */
-
-/* Fundo dos placeholders das fotos (Preto escuro) */
-.album-placeholder-bg {
-    background-color: #0d0d1a;
-    height: 120px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.album-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 20px;
-}
-
-.album-placeholder-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Rodapé Vermelho do Álbum com o botão Voltar */
-.album-footer {
-    padding: 15px;
-    text-align: left;
-}
-
-.btn-voltar {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
+/* --- INTRODUÇÃO (index.html)
