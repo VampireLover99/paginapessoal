@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------- */
 /* ARQUIVO: style.css - Estilos Visuais da Página */
-/* CORREÇÃO DE TELA CHEIA (CARTÃO GRANDE) */
+/* CORREÇÃO: Banner de Fundo (unnamed.jpg) */
 /* ------------------------------------------------------------------- */
 
 /* RESET ESSENCIAL */
@@ -27,15 +27,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px; /* Adiciona um pequeno padding para evitar que o cartão cole na borda da tela em dispositivos muito pequenos */
+    padding: 20px;
 }
 
 /* CARTÃO PRINCIPAL (Onde o conteúdo está) */
 .main-card {
-    /* CORREÇÃO: Define 95% da largura da tela. */
+    /* Define 95% da largura da tela. */
     width: 95%; 
-    
-    /* REMOVIDO: max-width para permitir que o cartão seja grande em telas grandes. */
     
     background-color: #1a1a2e; /* Fundo azul escuro principal */
     border-radius: 12px;
@@ -70,8 +68,8 @@ body {
 
 /* --- ESTILO DO CABEÇALHO (Fundo de Madeira na Introdução) --- */
 .header-bg {
-    /* **CAMINHO DA IMAGEM 1: Fundo do Cabeçalho** */
-    background-image: url('imagem_fundo_madeira.png'); 
+    /* **CORREÇÃO: NOVO BANNER unnamed.jpg** */
+    background-image: url('unnamed.jpg'); 
     background-size: cover;
     background-position: center;
     padding: 20px 20px 80px;
@@ -98,4 +96,70 @@ body {
     text-decoration: none;
 }
 
-/* --- INTRODUÇÃO (index.html)
+/* --- INTRODUÇÃO (index.html) --- */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.profile-pic {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão "Entrar" VERMELHO */
+.btn-entrar {
+    display: block;
+    width: 90%;
+    margin: 24px auto 0;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.btn-entrar:hover {
+    background-color: #990000;
+}
+
+/* --- ÁLBUM (album.html) --- */
+
+/* Fundo dos placeholders das fotos (Preto escuro) */
+.album-placeholder-bg {
+    background-color: #0d0d1a;
+    height: 18vw; /* Ajustei a altura para ser responsiva à tela */
+    max-height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.album-placeholder-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rodapé Vermelho do Álbum com o botão Voltar */
+.album-footer {
+    padding: 15px;
+    text-align: left;
+}
+
+.btn-voltar {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
