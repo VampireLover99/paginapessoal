@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------- */
 /* ARQUIVO: style.css - Estilos Visuais da Página */
-/* CORREÇÃO DE CENTRALIZAÇÃO FORÇADA */
+/* CORREÇÃO DE TAMANHO DO CARTÃO */
 /* ------------------------------------------------------------------- */
 
 /* RESET ESSENCIAL: Remove margens e paddings padrão de TODOS os elementos */
@@ -32,7 +32,8 @@ body {
 /* CARTÃO PRINCIPAL (Onde o conteúdo está) */
 .main-card {
     width: 90%;
-    max-width: 400px;
+    /* CORREÇÃO: Aumenta a largura máxima para 600px para que fique maior no desktop */
+    max-width: 600px; 
     background-color: #1a1a2e; /* Fundo azul escuro principal */
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
@@ -66,7 +67,7 @@ body {
 
 /* --- ESTILO DO CABEÇALHO (Fundo de Madeira na Introdução) --- */
 .header-bg {
-    /* **CAMINHO DA IMAGEM 1: Fundo do Cabeçalho** (Mantenha a correção de .png/.jpg que fizemos antes) */
+    /* **CAMINHO DA IMAGEM 1: Fundo do Cabeçalho** */
     background-image: url('imagem_fundo_madeira.png'); 
     background-size: cover;
     background-position: center;
