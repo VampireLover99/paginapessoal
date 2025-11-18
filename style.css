@@ -1,19 +1,34 @@
-{
+/* ------------------------------------------------------------------- */
+/* ARQUIVO: style.css - Estilos Visuais da Página */
+/* ------------------------------------------------------------------- */
+
+/* NOVA REGRA ESSENCIAL: Garante que o HTML ocupe 100% da janela */
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* CONFIGURAÇÃO GLOBAL (Aplicado a toda a janela do navegador) */
+body {
     background-color: #333; /* Fundo cinza escuro da área de trabalho */
     font-family: 'Arial', sans-serif;
     color: #ffffff;
     margin: 0;
+    
+    /* Alterações para centralização perfeita */
     display: flex;
     justify-content: center; /* Centraliza o cartão horizontalmente */
     align-items: center; /* Centraliza o cartão verticalmente */
     min-height: 100vh; /* Ocupa a altura total da tela */
+    height: 100%; /* Garante que o body preencha a altura do HTML */
+    width: 100%; /* Garante que o body preencha a largura do HTML */
 }
 
 /* CARTÃO PRINCIPAL (Onde o conteúdo está) */
 .main-card {
     width: 90%;
     max-width: 400px;
-    background-color: hsl(240, 19%, 14%); /* Fundo azul escuro principal */
+    background-color: #1a1a2e; /* Fundo azul escuro principal */
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     overflow: hidden;
